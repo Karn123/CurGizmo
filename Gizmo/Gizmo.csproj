@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D71A61AD-AF53-4B4C-A458-12D731C76276}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gizmo</RootNamespace>
+    <AssemblyName>Gizmo</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Box2DX\Box2DXDebug.cs" />
+    <Compile Include="Box2DX\Collision\BroadPhase.cs" />
+    <Compile Include="Box2DX\Collision\Collision.CollideCircle.cs" />
+    <Compile Include="Box2DX\Collision\Collision.CollideEdge.cs" />
+    <Compile Include="Box2DX\Collision\Collision.CollidePoly.cs" />
+    <Compile Include="Box2DX\Collision\Collision.cs" />
+    <Compile Include="Box2DX\Collision\Collision.Distance.cs" />
+    <Compile Include="Box2DX\Collision\Collision.TimeOfImpact.cs" />
+    <Compile Include="Box2DX\Collision\PairManager.cs" />
+    <Compile Include="Box2DX\Collision\Shapes\CircleShape.cs" />
+    <Compile Include="Box2DX\Collision\Shapes\EdgeShape.cs" />
+    <Compile Include="Box2DX\Collision\Shapes\PolygonShape.cs" />
+    <Compile Include="Box2DX\Collision\Shapes\Shape.cs" />
+    <Compile Include="Box2DX\Common\Mat22.cs" />
+    <Compile Include="Box2DX\Common\Mat33.cs" />
+    <Compile Include="Box2DX\Common\Math.cs" />
+    <Compile Include="Box2DX\Common\Settings.cs" />
+    <Compile Include="Box2DX\Common\Sweep.cs" />
+    <Compile Include="Box2DX\Common\Vec2.cs" />
+    <Compile Include="Box2DX\Common\Vec3.cs" />
+    <Compile Include="Box2DX\Common\XForm.cs" />
+    <Compile Include="Box2DX\Dynamics\Body.cs" />
+    <Compile Include="Box2DX\Dynamics\ContactManager.cs" />
+    <Compile Include="Box2DX\Dynamics\Contacts\CircleContact.cs" />
+    <Compile Include="Box2DX\Dynamics\Contacts\Contact.cs" />
+    <Compile Include="Box2DX\Dynamics\Contacts\ContactSolver.cs" />
+    <Compile Include="Box2DX\Dynamics\Contacts\EdgeAndCircleContact.cs" />
+    <Compile Include="Box2DX\Dynamics\Contacts\NullContact.cs" />
+    <Compile Include="Box2DX\Dynamics\Contacts\PolyAndCircleContact.cs" />
+    <Compile Include="Box2DX\Dynamics\Contacts\PolyAndEdgeContact.cs" />
+    <Compile Include="Box2DX\Dynamics\Contacts\PolyContact.cs" />
+    <Compile Include="Box2DX\Dynamics\Controllers\BuoyancyController.cs" />
+    <Compile Include="Box2DX\Dynamics\Controllers\ConstantAccelController.cs" />
+    <Compile Include="Box2DX\Dynamics\Controllers\ConstantForceController.cs" />
+    <Compile Include="Box2DX\Dynamics\Controllers\Controller.cs" />
+    <Compile Include="Box2DX\Dynamics\Controllers\GravityController.cs" />
+    <Compile Include="Box2DX\Dynamics\Controllers\TensorDampingController.cs" />
+    <Compile Include="Box2DX\Dynamics\Fixture.cs" />
+    <Compile Include="Box2DX\Dynamics\Island.cs" />
+    <Compile Include="Box2DX\Dynamics\Joints\DistanceJoint.cs" />
+    <Compile Include="Box2DX\Dynamics\Joints\GearJoint.cs" />
+    <Compile Include="Box2DX\Dynamics\Joints\Joint.cs" />
+    <Compile Include="Box2DX\Dynamics\Joints\LineJoint.cs" />
+    <Compile Include="Box2DX\Dynamics\Joints\MouseJoint.cs" />
+    <Compile Include="Box2DX\Dynamics\Joints\PrismaticJoint.cs" />
+    <Compile Include="Box2DX\Dynamics\Joints\PulleyJoint.cs" />
+    <Compile Include="Box2DX\Dynamics\Joints\RevoluteJoint.cs" />
+    <Compile Include="Box2DX\Dynamics\World.cs" />
+    <Compile Include="Box2DX\Dynamics\WorldCallbacks.cs" />
+    <Compile Include="Enum.cs" />
+    <Compile Include="FileManager.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameManager.cs" />
+    <Compile Include="Gizmo.cs" />
+    <Compile Include="GizmoFactory.cs" />
+    <Compile Include="GraphicManager.cs" />
+    <Compile Include="PhysicalManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scene.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Box2DX\Collision\TODO.txt" />
+    <Content Include="library\Box2DX.dll" />
+    <Content Include="Mesh.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
