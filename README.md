@@ -10,8 +10,6 @@
 + Save/Open Scene
 + Gizmo Binding
 
-### Introduction
-
 ### Example
 + To get familiar with Gizmo,you can run the program and open Gizmo/bin/Debug/example.bin to play with the scene we have created for you.
 
