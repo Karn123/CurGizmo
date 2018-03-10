@@ -14,7 +14,4 @@
 + To get familiar with Gizmo,you can run the program and open Gizmo/bin/Debug/example.bin to play with the scene we have created for you.
 
 ### Copyright(c)
-+ You can modify and copy this project in whatever situations.
-+ All rights reserved by Karn and Prinny,Software Engineering,ECNU,Shanghai,China.
-
-### Any questions plz send an email to kp10142510147@gmail.com
++ All rights reserved by Karn and Prinny, Software Engineering, ECNU, Shanghai, China.
